@@ -1,0 +1,17 @@
+{
+    "contents" : "outcome <- read.csv(\"outcome-of-care-measures.csv\", colClasses = \"character\")\noutcome[, 11] <- as.numeric(outcome[, 11])\nhead(outcome)\n\nsummary(outcome)\nstr(outcome)\n\n\noutcome[, 11] <- as.numeric(outcome[, 11])\n\nhist(outcome[, 11])\n\nfactor(outcome$State)\n",
+    "created" : 1430587058926.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "109048505",
+    "id" : "D8E75602",
+    "lastKnownWriteTime" : 578055781,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
