@@ -1,0 +1,17 @@
+{
+    "contents" : "source(\"rankall.R\")\n\nhead(rankall(\"heart attack\", 20), 10)\n#hospital state\n#AK <NA> AK\n#AL D W MCMILLAN MEMORIAL HOSPITAL AL\n#AR ARKANSAS METHODIST MEDICAL CENTER AR\n#AZ JOHN C LINCOLN DEER VALLEY HOSPITAL AZ\n#CA SHERMAN OAKS HOSPITAL CA\n#CO SKY RIDGE MEDICAL CENTER CO\n#CT MIDSTATE MEDICAL CENTER CT\n#DC <NA> DC\n#DE <NA> DE\n#FL SOUTH FLORIDA BAPTIST HOSPITAL FL\n\n\ntail(rankall(\"pneumonia\", \"worst\"), 3)\n#hospital state\n#WI MAYO CLINIC HEALTH SYSTEM - NORTHLAND, INC WI\n#WV PLATEAU MEDICAL CENTER WV\n#WY NORTH BIG HORN HOSPITAL DISTRICT WY\n\n\ntail(rankall(\"heart failure\"), 10)\n#hospital state\n#TN WELLMONT HAWKINS COUNTY MEMORIAL HOSPITAL TN\n#TX FORT DUNCAN MEDICAL CENTER TX\n#UT VA SALT LAKE CITY HEALTHCARE - GEORGE E. WAHLEN VA MEDICAL CENTER UT\n#VA SENTARA POTOMAC HOSPITAL VA\n#VI GOV JUAN F LUIS HOSPITAL & MEDICAL CTR VI\n#VT SPRINGFIELD HOSPITAL VT\n#WA HARBORVIEW MEDICAL CENTER WA\n#WI AURORA ST LUKES MEDICAL CENTER WI\n#WV FAIRMONT GENERAL HOSPITAL WV\n#WY CHEYENNE VA MEDICAL CENTER WY",
+    "created" : 1430670275810.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "196006780",
+    "id" : "35B48F1A",
+    "lastKnownWriteTime" : 1430672029,
+    "path" : "C:/Users/Charles/Dropbox/Notes_Coursera/Data Science - John Hopkins/2 - R Programming/4_Assignment/R Week 4/Test_rankall_R.R",
+    "project_path" : "Test_rankall_R.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

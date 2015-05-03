@@ -1,0 +1,17 @@
+{
+    "contents" : "best <- function(state, outcome) {\n  \n  #load heathcare.gov outcomes data\n  outcomeCSV <- read.csv(\"outcome-of-care-measures.csv\", colClasses = \"character\")\n\n  suppressWarnings(outcomeCSV[, 11] <- as.numeric(outcomeCSV[, 11]))        #coerce heart attack to numeric\n  suppressWarnings(outcomeCSV[, 17] <- as.numeric(outcomeCSV[, 17]))        #coerce heart failure to numeric  \n  suppressWarnings(outcomeCSV[, 23] <- as.numeric(outcomeCSV[, 23]))        #coerce pneumonia to numeric\n  \n  #First check outcome for validity\n  if (!outcome %in% c(\"heart attack\", \"heart failure\", \"pneumonia\")){\n    stop(\"invalid outcome\")\n  } \n  \n  #Then check state for validity \n  if (!state %in% levels(factor(outcomeCSV$State))){\n    stop(\"invalid state\")\n  } \n \n  \n#Now begin the actual work\n\n#set metric column number\n  if (outcome == \"heart attack\"){\n    outcomeCol <- 11\n  } else if (outcome == \"heart failure\"){\n    outcomeCol <- 17\n  } else if (outcome == \"pneumonia\"){\n    outcomeCol <- 23\n  } \n  \n\n\n  #subset for State attribute  \n  subState <- outcomeCSV[which(outcomeCSV$State == state),]\n  \n  #sort state subset by Hospital.Name alpha a-z\n  subState <- subState[order(subState$Hospital.Name),]\n  \n  #return first hospital in with the min for the given outcome and state\n  subState [which.min(subState[,outcomeCol]),\n            \"Hospital.Name\"] \n  \n}\n  \n",
+    "created" : 1430605331489.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1218759910",
+    "id" : "3F665ADB",
+    "lastKnownWriteTime" : 1430605040,
+    "path" : "C:/Users/Charles/Dropbox/Notes_Coursera/Data Science - John Hopkins/2 - R Programming/4_Assignment/R Week 4/best.R",
+    "project_path" : "best.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
